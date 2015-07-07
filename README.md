@@ -1,5 +1,9 @@
 # Hola, mundo
 
+> Versión 0.0.1
+> [Algunos derechos reservados](/LICENSE.md)
+
+
 Este programa está orientado a personas con experiencia mínima o inexistente en la operación y desarrollo de productos tecnológicos, que busquen hacerse de herramientas nuevas para resolver problemas. 
 
 ## Temario
