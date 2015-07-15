@@ -21,9 +21,9 @@ Tenemos que observar cómo ven loas programadoreas el mundo a la hora de program
 
 Ahora que vemos qué resuelve la programación, podemos aprender a hablar el lenguaje básico abstracto, que será la base del conocimiento que adquieran los participantes más adelante, eventualmente por su cuenta.
 
-* Algoritmoñol: Si las computadoras no piensan, ¿cómo "resuelven problemas"?
 * Estructuras de datos: La era de la información será para quienes la estructuren con sus manos.
 * Estructuras de control: El lenguaje propio electrónico
+* Algoritmoñol: Si las computadoras no piensan, ¿cómo "resuelven problemas"?
 
 ### `hacker` - Hacer
 
