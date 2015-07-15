@@ -116,17 +116,28 @@ persona[:que_tan_cool_es]
 
 Ruby nos indica con `nil` que no esa propiedad no tiene valor. La ausencia de valor es un tipo de dato también. No existe en nuestro diccionario de `persona`, pero no quita que Grace Hopper haya sido extremadamente cool. 
 
+---
+> A human must turn information into intelligence or knowledge. We've tended to forget that no computer will ever ask a new question.
+> 
+> Grace Hopper
+
+Extracto de "[The Wit and Wisdom of Grace Hopper](http://www.cs.yale.edu/homes/tap/Files/hopper-wit.html)", From The OCLC Newsletter, March/April, 1987, No. 167 (Editor and article author is Philip Schieber.)
+---
+
+Estos son sólo algunos de los tipos y estructuras de datos que tenemos en ruby, y hay muchas mas. Como programadores incluso podemos crear las que nosotros queramos, pero eso es para otra ocasión.
+
 ## Estructuras de control
 
-La lógica de las computadoras es, hasta ahora, binaria. Eso quiere decir que toda la información en la "era de la información" existe como un uno o un cero, flujo de electrones o no.
+> Nota: Esto no lo vamos a ver porque nomás es ñoñería y no creo que aclare nada sobre nada que queramos saber ahora. Lo dejo, por si luego me gusta para algo, y porqué no es como si estuviera usando una herramienta de SCM...
+> La lógica de las computadoras es, hasta ahora, binaria. Eso quiere decir que toda la información en la "era de la información" existe como un uno o un cero, flujo de electrones o no.
+> 
+> Es un viaje entender cómo es que esto resulta en fotos de gatitos, pero por ahora sólo basta saber que una esta pieza de información se llama bit, y una secuencia de 8 bits se llama byte.
+> 
+> Este byte, interpretado como un número en base 10, resulta ser cuarenta y dos. Si lo interpretamos como una posición en la tabla de letras ASCII, resulta ser la letra "B" mayúscula.
+> 
+> Lo importante, por ahora, es pensar en el estado binario de la información, y como enseñarle a la computadora a tomar decisiones al respecto.
 
-Es un viaje entender cómo es que esto resulta en fotos de gatitos, pero por ahora sólo basta saber que una esta pieza de información se llama bit, y una secuencia de 8 bits se llama byte.
-
-Este byte, interpretado como un número en base 10, resulta ser cuarenta y dos. Si lo interpretamos como una posición en la tabla de letras ASCII, resulta ser la letra "B" mayúscula.
-
-Lo importante, por ahora, es pensar en el estado binario de la información, y como enseñarle a la computadora a tomar decisiones al respecto.
-
-Estas decisiones, las conocemos como "estructuras de control"; Zafémonos de las observaciones posmodernistas, aprender a programar con Foucault es mucho mas dificil.
+Programando, intentamos mecanizar tanto la toma de decisiones como la tarea de llevarlas a cabo; lo hacemos a través del uso de "estructuras de control". Zafémonos de las observaciones posmodernistas, aprender a programar con Foucault es mucho mas dificil.
 
 En el ejercicio anterior, se toparon con un pedazo nuevo de código:
 
@@ -143,7 +154,7 @@ if 1 / 2 == 0.5
 end
 ```
 
-Este es el momento adecuado para decirles que la instrucción anterior no es *verdadera*, y esto se debe a que las computadoras son muy brutas. Cuándo le pedimos a ruby que divida [uno] entre [dos], éste interpreta la operación como una entre dos enteros, y por lo mismo va a regresarnos un entero, en este caso [cero].
+Este es el momento adecuado para decirles que la instrucción anterior no es *verdadera*, y esto se debe a que las computadoras son muy brutas. Cuándo le pedimos a ruby que divida [uno] entre [dos], éste interpreta la operación como una entre dos _enteros_, y por lo mismo va a regresarnos un entero, en este caso [cero].
 
 Por otro lado, no sólo podemos pedirle a la computadora que evalúe si una *expresión* es *verdadera*, también podemos pedirle evaluar lo contrario.
 
@@ -155,7 +166,7 @@ end
 
 ---
 
-Los programadores, eso sí, debemos ser activamente flojos. Tenemos una herramienta que nos ayuda a mecanizar procesos, y es por esto que no sólo podemos hacer que la computadora evalué "la *verdad*", sino también *falsedad* o distintos casos de *verdad*:
+Los programadores, eso sí, debemos ser activamente flojos. Tenemos una herramienta que nos ayuda a mecanizar procesos, evaluar "la *falsedad*" es muy sencillo:
 
 ```ruby
 if respuesta == 42
@@ -164,6 +175,12 @@ else
   puts "La respuesta no es 42"
 end
 ```
+
+Podemos incluso programar más de una evaluación de *verdad*:
+
+1. Por ejemplo, Si la variable `numero` equivale a `1`, el resultado de la evaluación será `puts "Güan"`
+2. Si `numero` en realidad equivale a `3`, entonces ruby diría: "Tri"
+3. De otro modo, si no es `1`, `2`, ó `3`, en este caso `0`, ruby dirá "Cuarenta y dos"
 
 ```ruby
 if numero == 1
@@ -177,17 +194,111 @@ else
 end
 ```
 
+Para estos casos, ruby tiene una mejor manera de hacer las cosas; está "diseñado para hacer feliz a loas programadoreas" [[cita](http://www.artima.com/intv/rubyP.html)], después de todo. 
+
+```ruby
+puts case numero
+  when 1 then "Güan"
+  when 2 then "Tu"
+  when 3 then "Tri"
+  when (4..41) then "Tu meni"
+  else "forti tu"
+end
+```
+
+---
+
+Hay estructuras mas interesantes que no sólo evalúan verdades:
+
+```ruby
+el_futuro = Time.now + 5
+until Time.now > el_futuro do
+  puts "Esperando a que llegue el futuro…"
+  sleep 1
+end
+puts "JETPACKS PARA TODOAS!"
+
+# => Esperando a que llegue el futuro…
+# => Esperando a que llegue el futuro…
+# => Esperando a que llegue el futuro…
+# => Esperando a que llegue el futuro…
+# => Esperando a que llegue el futuro…
+# => Jetpacks para TODOAS!
+```
+
+Otras, en las que iteramos por una lista:
+
+```ruby
+for a in asistentes
+  puts "Jetpack para #{a}"
+end
+puts "Jetpacks para TODOAS!"
+```
+
+Claro, que loas que escribimos ruby sabemos que hay mas de una manera para operar sobre un `array`:
+
+```ruby
+asistentes.each do |a|
+  puts "Jetpack para #{a}"
+end
+```
+
+```ruby
+puts asistentes.map {|a| "Jetpack para "+a }.join("\n")
+```
+
+---
 
 ## Algoritmoñol
 
-> A human must turn information into intelligence or knowledge. We've tended to forget that no computer will ever ask a new question.
+Con estos conceptos en mente, hablemos de Algoritmoñol, una palabra inventada que probablemente haga llorar a científicos de la computación como linguistas por igual. 
+
+En Algoritmoñol, las estructuras de datos son los *sustantivos* y las estructuras de control son los verbos.
+
+```ruby
+puts asistentes.map {|a| "Jetpack para "+a }.join("\n")
+```
+
+Eso diría:
+
+> Imprime el resultado de la siguientes expresiones:
 > 
-> Grace Hopper
+> 1. Toma la lista “asistentes” y:
+>   1. Convierte cada elemento:
+>     1. Sumando el elemento a “Jetpack para “
+> 2. Junta los elementos de la lista, poniendo el caracter “salto de línea” de pormedio.
 
-Extracto de "[The Wit and Wisdom of Grace Hopper](http://www.cs.yale.edu/homes/tap/Files/hopper-wit.html)", From The OCLC Newsletter, March/April, 1987, No. 167 (Editor and article author is Philip Schieber.)
+Bien, ahora que han visto un ejemplo de algoritmoñol, se pueden declarar expertoas en leerlo. Es muy parecido al español, si mas ñoño. La idea es aprender a escribirlo.
 
-Para decirle a una computadora que hacer, 
+Para hacerlo, tenemos que definir claramente las preguntas que nos estamos haciendo, por ejemplo "Tengo una lista de nombres, ¿a quiénes les toca un jetpack?".
 
+Con esto, ya sabemos qué entra: una lista de nombres. Sabemos qué va a resolver nuestro programa, y es momento de pensar brevemente en qué queremos que regrese.
+
+Podríamos especificar: "Mi programa debe entregar a la terminal texto que responda a la pregunta."
+
+Es así de obvio, que lo único que debemos decidir, es qué estructuras de control nos sirven para acercarnos a la respuesta.
+
+```ruby
+# Evalúa si persona merece un jetpack
+def merece_jetpack? persona
+  # Todoas merecemos uno!
+  return true
+end
+
+# El usuario en la terminal nos
+# va a dar la lista de asistentes
+asistentes = ARGV
+
+# Iteramos por la lista
+asistentes.each do |a|
+  if merece_jetpack? a
+    # Imprimimos los resultados
+    puts "Jetpack para #{a}"
+  end
+end
+```
+
+---
 
 ## quote
 > **Data dominates** . If you've chosen the **right data structures** and organized things well, the algorithms will almost always be self-evident. **Data structures, not algorithms**, are central to programming.
