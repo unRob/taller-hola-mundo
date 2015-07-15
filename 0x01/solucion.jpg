@@ -1,0 +1,10 @@
+require_relative 'lib.rb'
+
+tuits = get_tweets('unrob')
+counter = Hash.new {0}
+
+tuits.each do |tuit|
+  counter[tuit[:fecha].hour] += 1
+end
+
+puts counter.sort_by {|k,v| v}.reverse.to_h

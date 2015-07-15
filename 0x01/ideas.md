@@ -293,11 +293,49 @@ asistentes = ARGV
 asistentes.each do |a|
   if merece_jetpack? a
     # Imprimimos los resultados
-    puts "Jetpack para #{a}"
+    puts "Jetpack para #{a}!"
   end
 end
 ```
 
+Si le indicamos a ruby que interprete nuestro archivo, obtenemos la respuesta:
+
+```bash
+ruby jetpacks.rb Darinka Liliana "Ana Paula" Erandi Fer Maru
+```
+
+## Ejercicio
+
+### Archivos:
+* [Aca empezamos](ejercicio.rb)
+* [Usaremos este código](lib.rb)
+
+¿A qué hora tuiteo mas?
+
+Hints:
+```ruby
+a = [5, 7, 11, 13]
+a[2] += 1 # => 12
+
+h = {}
+h[24] = 1
+h[24] += 1
+h[6] = 42
+puts h
+# => {0 => 2, 6 => 42}
+
+a.each do |item|
+  # ?
+end
+
+h[a[0]] += 1
+# => NoMethodError: undefined method `+' for nil:NilClass
+
+if h.has_key?(a[0])
+  h[a[0]] = 0
+end
+h[a[0]] += 1 #=> 1
+```
 ---
 
 ## quote

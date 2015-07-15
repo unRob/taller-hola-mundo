@@ -29,8 +29,7 @@ Ahora que vemos qué resuelve la programación, podemos aprender a hablar el len
 
 Muchas nueces y poco ruido, es hora de aplicar lo que sabemos a problemas discretos y herramientas concretas, el mero mole de la programación.
 
-* Hola, configuración!: Antes de empezar, tenemos que preparar 
-* Hola, mundo!: Haremos `/(ruby|javascript)/`
+* Hola modularización!: Antes de volvernos changos por tener tantos archivos regados.
 * Hola, librerías!: No tenemos que reinventar la rueda, hay código gratis para todoas.
 
 ### `rtfm` - No entender
