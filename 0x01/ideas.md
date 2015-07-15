@@ -81,7 +81,7 @@ asistentes.include? "Grace Hopper"
 
 Las listas son muy útiles cuándo deseas usar los datos contenidos de manera secuencial, ya que sólo podemos obtener los valores contenidos mediante sus índices. Esto no siempre es adecuado, y muchas veces vamos a querer almacenar estos datos "etiquetados de alguna manera". En estos casos podemos usar un diccionario, en términos de ruby, un _Hash_
 
-```
+```ruby
 persona = {
     nombre: "Grace Hopper",
     ocupacion: "Programadora",
@@ -91,7 +91,7 @@ persona = {
 
 Los diccionarios relacionan una _propiedad_ a un _valor_. En nuestro ejemplo, la _variable_ asistente, tiene una _propiedad_ `:nombre`, qué corresponde a "Grace Hopper". A diferencia de las listas, no usamos índices para obtener los valores, sino las propiedades mismas del diccionario.
 
-```
+```ruby
 persona[:nombre]
 # => "Grace Hopper"
 
@@ -104,6 +104,17 @@ persona.has_key? :fecha_nacimiento
 persona[:ocupacion] = "Científica de la computación"
 # => "Científica de la computación"
 ```
+
+¿Cual es el _tipo_ de las propiedades de este diccionario? No son `Strings` ya que no están delimitadas por comillas dobles ("), pero son muy parecidas, y por ahora sólo es necesario saber que son _Símbolos_. Nos hacen la vida fácil cuando trabajamos con diccionarios, facilitándonos la enumeración de propiedades.
+
+¿Qué pasaría si intentamos obtener una propiedad inexistente de un diccionario?
+
+```ruby
+persona[:que_tan_cool_es]
+# => nil
+```
+
+Ruby nos indica con `nil` que no esa propiedad no tiene valor. La ausencia de valor es un tipo de dato también. No existe en nuestro diccionario de `persona`, pero no quita que Grace Hopper haya sido extremadamente cool. 
 
 ## Estructuras de control
 
