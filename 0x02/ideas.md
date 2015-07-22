@@ -1,5 +1,9 @@
 # rftm | no entender | 0x02
 
+Por mas que memoricemos, no siempre vamos a saber inmediatamente como escribir código, así que es buena idea prepararnos para enfrentar los posibles errores. Hoy vamos a aprender a usar algunos métodos para des-trabarnos.
+
+Estos mecanismos los usamos de manera cotidiana para entender y corregir problemas en la funcionalidad y estructura de nuestro código, y es básicamente nuestro primer recurso para superar la curva de aprendizaje que supone programar.
+
 ### Estructuras de datos
 De la sesión pasada sabemos que podemos almacenar distintos _tipos_ de información en _estructuras de datos_ como
 
