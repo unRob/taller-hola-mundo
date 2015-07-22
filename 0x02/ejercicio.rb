@@ -15,3 +15,5 @@
 # ruby ejercicio.rb cuac
 
 palabra = ARGV[0]
+
+# ¿Qué sigue?
