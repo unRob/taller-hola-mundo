@@ -198,3 +198,9 @@ puts Date.today
 A través de estos métodos podemos ir derivando los problemas monumentales en problemas fáciles de resolver, casi sólo buscando en google.
 
 Esta es la única cosa que tenemos que saber de memoria, como partir los problemas grandes en problemas cada vez mas fáciles de resolver por su cuenta.
+
+## quote 
+
+> If debugging is the process of removing software bugs, then programming must be the process of putting them in.
+> 
+> Atribuida a EWD
