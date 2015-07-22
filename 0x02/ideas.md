@@ -1,8 +1,10 @@
 # rftm | no entender | 0x02
 
-Por mas que memoricemos, no siempre vamos a saber inmediatamente como escribir código, así que es buena idea prepararnos para enfrentar los posibles errores. Hoy vamos a aprender a usar algunos métodos para des-trabarnos.
+Es dificil escribir código libre de errores a la primera; memorizar ayuda, pero dista de ser el único recurso de la programadora. Hoy nos vamos a preparar para enfrentar los posibles errores, aprendiendo a usar métodos sencillos para des-trabarnos.
 
-Estos mecanismos los usamos de manera cotidiana para entender y corregir problemas en la funcionalidad y estructura de nuestro código, y es básicamente nuestro primer recurso para superar la curva de aprendizaje que supone programar.
+A través del uso cotidiano de los mismos, podemos identificar, entender y corregir problemas en nuestro código, tanto funcionales como de estructura.
+
+Ya sabemos de primera mano que la curva de aprendizaje que supone programar es bastante inclinada, y usaremos estos métodos como primera línea de defensa.
 
 ### Estructuras de datos
 De la sesión pasada sabemos que podemos almacenar distintos _tipos_ de información en _estructuras de datos_ como
@@ -193,11 +195,15 @@ require 'date'
 puts Date.today
 ```
 
----
+### Problemitas de Problemotas
 
 A través de estos métodos podemos ir derivando los problemas monumentales en problemas fáciles de resolver, casi sólo buscando en google.
 
-Esta es la única cosa que tenemos que saber de memoria, como partir los problemas grandes en problemas cada vez mas fáciles de resolver por su cuenta.
+Cada que subdividimos una tarea en tareas más pequeñas, estas últimas se vuelven mas fáciles de resolver, al punto que podamos ver que sólo hay dos tipos de problemas:
+
+Problemas lo suficientemente sencillos que de antemano sabemos resolver, o problemas que no hemos subdividido lo suficiente.
+
+## Ejercicio
 
 ## quote 
 

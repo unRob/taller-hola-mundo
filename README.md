@@ -31,7 +31,7 @@ Vamos a cometer errores, y nos vamos a trabar, es importante conocer los método
 
 * Rubber-duck debugging
 * GTSOI: Google the shit out of it
-* Meatspace: Las computadoras no saben pensar, loas programadoreas no sabemos hablar.
+* Problemitas de Problemotas: Puedo no saber todo, pero definitivamente sé algo.
 
 ### `hacker` - Hacer
 
