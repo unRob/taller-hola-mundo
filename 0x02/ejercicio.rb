@@ -1,16 +1,17 @@
-#
-#
-#
-#
-#
-#
-#
-#
-#
+# Vamos a tomar una palabra de ARGV
+# supongamos que enviamos "cuac"
+# y lograr que se imprima así:
+# cuac
+# cua
+# cu
+# c
+# cu
+# cua
+# cuac
 
-str = "electrodoméstico"
+# Este programa se ejecuta desde la terminal
+# (no la consola interactiva)
+# de la siguiente manera:
+# ruby ejercicio.rb cuac
 
-(str.length).downto(-str.length).each do |caracteres|
-  next if caracteres == 0 || caracteres == -1
-  puts str[0, caracteres.abs]
-end
+palabra = ARGV[0]
