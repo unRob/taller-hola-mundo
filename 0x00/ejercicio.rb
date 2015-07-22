@@ -24,6 +24,6 @@ end
 # -----
 #
 # Hints:
-# Las líneas que empiezan con un "hash" (#), son ignoradas por ruby
+# Las líneas que empiezan con un "octothorpe" (#), son ignoradas por ruby
 # las usamos para comentar nuestro código
 # google: "ruby odd number"
