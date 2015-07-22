@@ -1,6 +1,14 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
+unless [].respond_to? :to_h
+  class Array
+    def to_h
+      Hash[self]
+    end
+  end
+end
+
 require 'time'
 require 'base64'
 require 'cgi'
@@ -38,9 +46,16 @@ def request query, oauth
 
   requester = Net::HTTP.new(uri.host, uri.port)
   requester.use_ssl = true
+
   # requester.set_debug_output $stderr
-  res = requester.start do |http|
-    http.request(req)
+  begin
+    res = requester.start do |http|
+      http.request(req)
+    end
+  rescue OpenSSL::SSL::SSLError
+    #porqué windows
+    requester.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    retry
   end
 
   JSON.parse(res.body)

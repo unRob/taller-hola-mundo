@@ -25,13 +25,6 @@ Ahora que vemos qué resuelve la programación, podemos aprender a hablar el len
 * Estructuras de control: El lenguaje propio electrónico
 * Algoritmoñol: Si las computadoras no piensan, ¿cómo "resuelven problemas"?
 
-### `hacker` - Hacer
-
-Muchas nueces y poco ruido, es hora de aplicar lo que sabemos a problemas discretos y herramientas concretas, el mero mole de la programación.
-
-* Hola modularización!: Antes de volvernos changos por tener tantos archivos regados.
-* Hola, librerías!: No tenemos que reinventar la rueda, hay código gratis para todoas.
-
 ### `rtfm` - No entender
 
 Vamos a cometer errores, y nos vamos a trabar, es importante conocer los métodos para resolver los problemas que nosotros mismos creamos al programar, y cómo resolver las dudas que tengamos en el camino.
@@ -39,6 +32,13 @@ Vamos a cometer errores, y nos vamos a trabar, es importante conocer los método
 * Rubber-duck debugging
 * GTSOI: Google the shit out of it
 * Meatspace: Las computadoras no saben pensar, loas programadoreas no sabemos hablar.
+
+### `hacker` - Hacer
+
+Muchas nueces y poco ruido, es hora de aplicar lo que sabemos a problemas discretos y herramientas concretas, el mero mole de la programación.
+
+* Hola modularización!: Antes de volvernos changos por tener tantos archivos regados.
+* Hola, librerías!: No tenemos que reinventar la rueda, hay código gratis para todoas.
 
 ### `progasm` - Materializar
 
